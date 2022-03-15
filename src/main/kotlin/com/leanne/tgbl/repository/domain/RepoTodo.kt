@@ -1,6 +1,7 @@
 package com.leanne.tgbl.repository.domain
 
 import com.leanne.tgbl.rest.domain.RestTodo
+import java.time.LocalDateTime
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
@@ -8,7 +9,7 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name = "tgbl")
+@Table(name = "todos")
 data class RepoTodo(
     @field:Id
     @field:GeneratedValue
@@ -20,6 +21,12 @@ data class RepoTodo(
 
     @field:Column(name = "completed")
     val completed: Boolean = false,
+
+    @field:Column(name = "created_at")
+    val createdAt: LocalDateTime? = null,
+
+    @field:Column(name = "updated_at")
+    val updatedAt: LocalDateTime? = null,
 ) {
     companion object {
         fun toRestTodo(repoTodo: RepoTodo): RestTodo {
