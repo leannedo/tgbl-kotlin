@@ -4,7 +4,7 @@ A Kotlin/Spring backend for The Great Bucket List application.
 ## How to start
 
 Prerequisite:
-- Java 16
+- Java 17
 - Create a local DB env file as `database.env`, with the following config:
 ```
 POSTGRES_USER=postgres
@@ -37,3 +37,4 @@ Welcome to the great bucket list!
 - Kotlin
 - Spring Boot
 - PostgreSQL
+- Flyway (for DB migration)
